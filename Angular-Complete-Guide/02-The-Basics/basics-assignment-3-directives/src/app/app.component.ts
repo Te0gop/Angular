@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  toggle: boolean = false;
+  logs: string[] = [];
+
+
+  onClick() {
+    this.toggle = !this.toggle;
+    this.logs.push(new Date().toISOString())
+  }
+
 }
