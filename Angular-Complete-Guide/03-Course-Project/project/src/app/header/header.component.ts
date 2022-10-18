@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-headers',
-  templateUrl: './headers.component.html',
-  styleUrls: ['./headers.component.css']
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
 })
 export class HeadersComponent implements OnInit {
 
@@ -11,5 +11,6 @@ export class HeadersComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
 
 }
