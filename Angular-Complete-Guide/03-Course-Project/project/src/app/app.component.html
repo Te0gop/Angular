@@ -8,3 +8,12 @@
     </div>
   </div>
 </div>
+
+<ul>
+  <li (click)="firstToggle()" [ngClass]="{'clicked-color': firstOpen === true}" class="col-md-3">First Line</li>
+  <li (click)="secondToggle()" [ngClass]="{'clicked-color': secondOpen === true}" class="col-md-3">Second Line</li>
+  <li (click)="thirdToggle()" [ngClass]="{'clicked-color': thirdOpen === true}" class="col-md-3">Third Line</li>
+  <hr>
+  <button class="btn btn--full">Button</button>
+</ul>
+
