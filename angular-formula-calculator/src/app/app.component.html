@@ -1,0 +1,59 @@
+<div class="container mt-4 text-start">
+  <div class="row mb-2">
+    <div class="col-4 text-center">
+      <h2>Анализ на трудността</h2>
+      <img src="../assets/1.png" width="200" height="auto">
+    </div>
+    <div class="col-4 text-center">
+      <h2>Анализ на дискриминативната сила</h2>
+      <img src="../assets/2.png" width="200" height="auto" alt="">
+    </div>
+    <div class="col-4 text-center">
+      <h2>Анализ на трудността</h2>
+      <img src="../assets/3.png" width="350" height="auto" alt="">
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Formula 1 -->
+    <div class="col-4 mb-3">
+      <label><span class="fw-bold">n</span> (общ брой ученици):</label>
+      <input type="number" class="form-control" [(ngModel)]="n1">
+      <label><span class="fw-bold">Nr</span> (брой ученици от двете групи, решили задачата):</label>
+      <input type="number" class="form-control" [(ngModel)]="Nr1">
+      <label><span class="fw-bold">Nb</span> (брой ученици от двете групи, решавали задачата):</label>
+      <input type="number" class="form-control" [(ngModel)]="Nb1">
+      <button class="btn btn-danger me-2 mt-2" (click)="clearFirstFormula()">Изчисти</button>
+      <button class="btn btn-primary mt-2" (click)="calculateFirstFormula()">Пресметни</button>
+      <p *ngIf="resultFormula1 !== null" class="mt-2">Резултат: {{ resultFormula1 }}</p>
+    </div>
+
+    <!-- Formula 2 -->
+    <div class="col-4 mb-3">
+      <label><span class="fw-bold">Ru</span> (брой на учениците от "силната" група, които са решили вярно задачата):</label>
+      <input type="number" class="form-control" [(ngModel)]="Ru2">
+      <label><span class="fw-bold">Rl</span> (брой на учениците от "слабата" група, които са решили вярно задачата):</label>
+      <input type="number" class="form-control" [(ngModel)]="Rl2">
+      <label><span class="fw-bold">T</span> (общ брой на учениците от двете групи):</label>
+      <input type="number" class="form-control" [(ngModel)]="T2">
+      <button class="btn btn-danger me-2 mt-2" (click)="clearSecondFormula()">Изчисти</button>
+      <button class="btn btn-primary mt-2" (click)="calculateSecondFormula()">Пресметни</button>
+      <p *ngIf="resultFormula2 !== null" class="mt-2">Резултат: {{ resultFormula2 }}</p>
+    </div>
+
+    <!-- Formula 3 -->
+    <div class="col-4 mb-3">
+      <label><span class="fw-bold">Nr</span> (брой на лицата от двете екстремални групи, които са решили вярно задачата):</label>
+      <input type="number" class="form-control" [(ngModel)]="Nr3">
+      <label><span class="fw-bold">Nf</span> (брой на лицата от фвете екстремални групи, които са решили грешно задачата):</label>
+      <input type="number" class="form-control" [(ngModel)]="Nf3">
+      <label><span class="fw-bold">m</span> (брой на различните възможни отговори към задачата):</label>
+      <input type="number" class="form-control" [(ngModel)]="m3">
+      <label><span class="fw-bold">N</span> (брой на лицата от двете екстремални групи, които са решили вярно или невярно задачата):</label>
+      <input type="number" class="form-control" [(ngModel)]="N3">
+      <button type="button" class="btn btn-danger me-2 mt-2" (click)="clearThirdFormula()">Изчисти</button>
+      <button class="btn btn-primary mt-2" (click)="calculateThirdFormula()">Пресметни</button>
+      <p *ngIf="resultFormula3 !== null" class="mt-2">Резултат: {{ resultFormula3 }}</p>
+    </div>
+  </div>
+</div>
